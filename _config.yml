@@ -29,19 +29,21 @@ github:
   username: vishuchauhan27 # change to your GitHub username
 
 twitter:
-  username: twitter_username # change to your Twitter username
+  username: Vikash345880221 # change to your Twitter username
+
+linkedin:
+  username: vikash-chauhan-190b24224  # change to your LinkedIn username
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Smyle :)
-  email: vishuchauhan.2017@gmail.com # change to your email address
+  # email: vishuchauhan.2017@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
     - https://github.com/vishuchauhan27 # change to your Github homepage
     # Uncomment below to add more social links
-    # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    - https://www.linkedin.com/in/vikash-chauhan-190b24224/
 
 # Site Verification Settings
 webmaster_verifications:

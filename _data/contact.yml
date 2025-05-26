@@ -6,13 +6,18 @@
 - type: twitter
   icon: "fa-brands fa-x-twitter"
 
-- type: email
-  icon: "fas fa-envelope"
-  noblank: true # open link in current tab
+#- type: email
+ # icon: "fas fa-envelope"
+  #noblank: true # open link in current tab
 
-- type: rss
-  icon: "fas fa-rss"
-  noblank: true
+- type: linkedin
+  icon: 'fab fa-linkedin' # icons powered by <https://fontawesome.com/>
+  noblank: false
+  url: 'https://www.linkedin.com/in/vikash-chauhan-190b24224/' # Fill with your Linkedin homepage
+
+- type: telegram
+  icon: 'fab fa-telegram' # icons powered by <https://fontawesome.com/>
+  url: 'https://t.me/VikashChauhan27' # Fill with your Telegram account page
 # Uncomment and complete the url below to enable more contact options
 #
 # - type: mastodon
